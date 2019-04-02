@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.qa.landlordGateway.Constants;
 import com.qa.landlordGateway.entity.Landlord;
-import com.qa.landlordGateway.entity.LandlordBuilder;
 import com.qa.landlordGateway.repository.LandlordRepo;
 
 @Service 

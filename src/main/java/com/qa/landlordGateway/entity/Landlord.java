@@ -2,7 +2,6 @@ package com.qa.landlordGateway.entity;
 
 import org.springframework.data.annotation.Id;
 
-
 public class Landlord {
 	@Id
 	private String id;

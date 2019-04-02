@@ -18,7 +18,7 @@ import com.qa.landlordGateway.testMain.Constants;
 public class LandlordBuilderTest {
 	
 	@Autowired
-	private static LandlordBuilder landlordBuilder;
+	private LandlordBuilder landlordBuilder;
 
 	@Before
 	public void getBuilder() {
