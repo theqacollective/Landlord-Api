@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.entity;
+package com.qa.landlordgateway.entity;
 
 import java.util.Optional;
 
@@ -12,9 +12,9 @@ public class LandlordBuilder {
 	private String lastName = null;
 	private String email = null;
 	private String phoneNumber = null;
-	private static LandlordBuilder landlordBuilder;
+	private LandlordBuilder landlordBuilder;
 
-	private LandlordBuilder() {
+	public LandlordBuilder() {
 
 	}
 
@@ -46,7 +46,7 @@ public class LandlordBuilder {
 		return landlord;
 	}
 
-	public static LandlordBuilder getLandlord() {
+	public LandlordBuilder getLandlord() {
 		if (landlordBuilder == null) {
 			landlordBuilder = new LandlordBuilder();
 		}

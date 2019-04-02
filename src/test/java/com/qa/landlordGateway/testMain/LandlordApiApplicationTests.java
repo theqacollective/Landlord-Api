@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.testMain;
+package com.qa.landlordgateway.testMain;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.qa.landlordGateway.Constants;
-import com.qa.landlordGateway.LandlordApiApplication;
+import com.qa.landlordgateway.Constants;
+import com.qa.landlordgateway.LandlordApiApplication;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

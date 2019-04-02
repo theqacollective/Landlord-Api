@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.testMain;
+package com.qa.landlordgateway.testMain;
 
 import java.nio.charset.Charset;
 
@@ -7,14 +7,20 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.landlordGateway.entity.Landlord;
-import com.qa.landlordGateway.entity.LandlordBuilder;
+import com.qa.landlordgateway.entity.Landlord;
+import com.qa.landlordgateway.entity.LandlordBuilder;
 
 public class Constants {
+	static LandlordBuilder landlordBuilder = new LandlordBuilder();
 	private static final Landlord NULL_LANDLORD = new Landlord();
-	private static final Landlord DEFAULT_BUILDER_LANDLORD = LandlordBuilder.getLandlord().landlordBuild();
+	private static final Landlord DEFAULT_BUILDER_LANDLORD = landlordBuilder.getLandlord().landlordBuild();
 	public static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 	public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(), MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
+	public static final String CREATE_URL = "/createLandlord";
+	public static final String DELETE_URL = "/deleteLandlord";
+	public static final String UPDATE_URL = "/updateLandlord/{firstName}/{lastName}";
+	public static final String GET_ALL_URL= "/getAllLandlords";
+	public static final String LANDLORD_SERCH_PATH = "/lanlordSearch";
 	private static final String TEST_FIRST_NAME = "TestFirst";
 	private static final String TEST_LAST_NAME = "TestLast";
 	private static final String TEST_CONTACT_NUMBER = "07727715483";
@@ -29,7 +35,7 @@ public class Constants {
 	public static Landlord getNullLandlord() {
 		return NULL_LANDLORD;
 	}
-	public static Landlord getDefaultBuilderLandlord() {
+	public static  Landlord getDefaultBuilderLandlord() {
 		return DEFAULT_BUILDER_LANDLORD;
 	}
 	public static String getTestFirstName() {

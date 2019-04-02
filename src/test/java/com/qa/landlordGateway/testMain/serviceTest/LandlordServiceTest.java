@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.testMain.serviceTest;
+package com.qa.landlordgateway.testMain.serviceTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.notNull;
@@ -18,10 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.qa.landlordGateway.entity.Landlord;
-import com.qa.landlordGateway.repository.LandlordRepo;
-import com.qa.landlordGateway.service.LandlordService;
-import com.qa.landlordGateway.testMain.Constants;
+import com.qa.landlordgateway.entity.Landlord;
+import com.qa.landlordgateway.repository.LandlordRepo;
+import com.qa.landlordgateway.service.LandlordService;
+import com.qa.landlordgateway.testMain.Constants;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

@@ -1,4 +1,4 @@
-package com.qa.landlordGateway;
+package com.qa.landlordgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

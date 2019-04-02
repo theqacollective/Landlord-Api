@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.entity;
+package com.qa.landlordgateway.entity;
 
 import org.springframework.data.annotation.Id;
 

@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.testMain.entitiesTest;
+package com.qa.landlordgateway.testMain.entitiesTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNull;
@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.qa.landlordGateway.entity.Landlord;
-import com.qa.landlordGateway.testMain.Constants;
+import com.qa.landlordgateway.entity.Landlord;
+import com.qa.landlordgateway.testMain.Constants;
 
 
 @RunWith(SpringRunner.class)

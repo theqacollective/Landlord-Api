@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.controllers;
+package com.qa.landlordgateway.controllers;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qa.landlordGateway.Constants;
-import com.qa.landlordGateway.entity.Landlord;
-import com.qa.landlordGateway.entity.LandlordBuilder;
-import com.qa.landlordGateway.service.LandlordService;
+import com.qa.landlordgateway.entity.Landlord;
+import com.qa.landlordgateway.entity.LandlordBuilder;
+import com.qa.landlordgateway.service.LandlordService;
+import com.qa.landlordgateway.Constants;
 
 @RestController
 @CrossOrigin

@@ -1,4 +1,4 @@
-package com.qa.landlordGateway.testMain.entitiesTest;
+package com.qa.landlordgateway.testMain.entitiesTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.qa.landlordGateway.entity.LandlordBuilder;
-import com.qa.landlordGateway.testMain.Constants;
+import com.qa.landlordgateway.entity.LandlordBuilder;
+import com.qa.landlordgateway.testMain.Constants;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -22,13 +22,13 @@ public class LandlordBuilderTest {
 
 	@Before
 	public void getBuilder() {
-		this.landlordBuilder = LandlordBuilder.getLandlord();
+		this.landlordBuilder = landlordBuilder.getLandlord();
 		assertThat(landlordBuilder).isNotNull();
 	}
 
 	@After
 	public void resetBuilder() {
-		this.landlordBuilder = LandlordBuilder.getLandlord();
+		this.landlordBuilder = landlordBuilder.getLandlord();
 		assertThat(landlordBuilder).isNotNull();
 	}
 

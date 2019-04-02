@@ -1,4 +1,4 @@
-package com.qa.landlordGateway;
+package com.qa.landlordgateway;
 
 public class Constants {
 	public static final String CREATE_LANDLORD_PATH = "/createLandlord";
