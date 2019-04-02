@@ -1,15 +1,11 @@
 package com.qa.landlordGateway.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 
-@Entity
+
 public class Landlord {
-
 	@Id
-	@GeneratedValue
-	private Long id;
+	private String id;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -25,11 +21,11 @@ public class Landlord {
 		this.phoneNumber = testContactNumber;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
