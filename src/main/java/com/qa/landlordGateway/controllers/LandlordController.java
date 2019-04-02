@@ -2,12 +2,14 @@ package com.qa.landlordGateway.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,12 +39,27 @@ public class LandlordController {
 		return this.landlordService.getLandlords();
 	}
 	@GetMapping(Constants.LANDLORD_SERCH_PATH)
-	public List<Landlord> landlordSearch(String firstName, String lastName){
-		return this.landlordService.landlordSearch(landlordBuilder.firstName(firstName).lastName(lastName).landlordBuild());
+	public List<Landlord> landlordSearch(String firstName, String lastName, String email, String phoneNumber){
+		return this.landlordService.landlordSearch(landlordBuilder.firstName(firstName).lastName(lastName).email(email).phoneNumber(phoneNumber).landlordBuild());
 	}
+	@DeleteMapping(Constants.DELETE_URL)
+	public String deleteLandlord(String firstName, String lastName,String email, String phoneNumber) {
+		
+		List<Landlord> landlords = this.landlordSearch(firstName,lastName,email,phoneNumber);
 
+		for (int i = 0; i < landlords.size(); i++) {
+			this.landlordService.deleteLandlord(landlords.get(i));
+		}
+		return Constants.getDeletionMessage();
+	}
 	private RestTemplateBuilder rtb;
 
+	@PutMapping(Constants.UPDATE_URL)
+	public String updateLandlord(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @RequestBody Landlord updateLandlord)
+	{
+		this.landlordService.updateLandlord(firstName, lastName, updateLandlord);
+		return Constants.getUpdateMesssage();
+	}
 	public RestTemplateBuilder getRtb() {
 		return rtb;
 	}
