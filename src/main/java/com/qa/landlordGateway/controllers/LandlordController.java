@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.controllers;
+package com.qa.landlordGateway.controllers;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qa.landlordgateway.entity.Landlord;
-import com.qa.landlordgateway.entity.LandlordBuilder;
-import com.qa.landlordgateway.service.LandlordService;
-import com.qa.landlordgateway.Constants;
+import com.qa.landlordGateway.Constants;
+import com.qa.landlordGateway.entity.Landlord;
+import com.qa.landlordGateway.entity.LandlordBuilder;
+import com.qa.landlordGateway.service.LandlordService;
 
 @RestController
 @CrossOrigin
@@ -57,8 +57,7 @@ public class LandlordController {
 	@PutMapping(Constants.UPDATE_URL)
 	public String updateLandlord(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @RequestBody Landlord updateLandlord)
 	{
-		this.landlordService.updateLandlord(firstName, lastName, updateLandlord);
-		return Constants.getUpdateMesssage();
+		return this.landlordService.updateLandlord(firstName, lastName, updateLandlord);
 	}
 	public RestTemplateBuilder getRtb() {
 		return rtb;

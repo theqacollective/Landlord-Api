@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.testMain;
+package com.qa.landlordGateway.testMain;
 
 import java.nio.charset.Charset;
 
@@ -7,8 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.landlordgateway.entity.Landlord;
-import com.qa.landlordgateway.entity.LandlordBuilder;
+import com.qa.landlordGateway.entity.Landlord;
+import com.qa.landlordGateway.entity.LandlordBuilder;
 
 public class Constants {
 	static LandlordBuilder landlordBuilder = new LandlordBuilder();

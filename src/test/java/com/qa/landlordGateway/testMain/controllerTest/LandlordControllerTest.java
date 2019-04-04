@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.testMain.controllerTest;
+package com.qa.landlordGateway.testMain.controllerTest;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.notNull;
@@ -22,11 +22,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.qa.landlordgateway.controllers.LandlordController;
-import com.qa.landlordgateway.entity.Landlord;
-import com.qa.landlordgateway.entity.LandlordBuilder;
-import com.qa.landlordgateway.service.LandlordService;
-import com.qa.landlordgateway.testMain.Constants;
+import com.qa.landlordGateway.controllers.LandlordController;
+import com.qa.landlordGateway.entity.Landlord;
+import com.qa.landlordGateway.entity.LandlordBuilder;
+import com.qa.landlordGateway.service.LandlordService;
+import com.qa.landlordGateway.testMain.Constants;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(LandlordController.class)

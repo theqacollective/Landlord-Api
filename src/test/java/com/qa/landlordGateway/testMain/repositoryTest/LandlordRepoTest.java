@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.testMain.repositoryTest;
+package com.qa.landlordGateway.testMain.repositoryTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.qa.landlordgateway.repository.LandlordRepo;
+import com.qa.landlordGateway.repository.LandlordRepo;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

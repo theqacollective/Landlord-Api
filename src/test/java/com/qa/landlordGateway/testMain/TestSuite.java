@@ -1,16 +1,16 @@
 
-package com.qa.landlordgateway.testMain;
+package com.qa.landlordGateway.testMain;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.qa.landlordgateway.testMain.controllerTest.LandlordControllerTest;
-import com.qa.landlordgateway.testMain.entitiesTest.LandlordBuilderTest;
-import com.qa.landlordgateway.testMain.entitiesTest.LandlordTest;
-import com.qa.landlordgateway.testMain.repositoryTest.LandlordRepoTest;
-import com.qa.landlordgateway.testMain.serviceTest.LandlordServiceTest;
+import com.qa.landlordGateway.testMain.controllerTest.LandlordControllerTest;
+import com.qa.landlordGateway.testMain.entitiesTest.LandlordBuilderTest;
+import com.qa.landlordGateway.testMain.entitiesTest.LandlordTest;
+import com.qa.landlordGateway.testMain.repositoryTest.LandlordRepoTest;
+import com.qa.landlordGateway.testMain.serviceTest.LandlordServiceTest;
 
 @RunWith(Suite.class)
 

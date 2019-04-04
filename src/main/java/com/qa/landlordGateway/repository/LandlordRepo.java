@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.repository;
+package com.qa.landlordGateway.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.qa.landlordgateway.entity.Landlord;
+import com.qa.landlordGateway.entity.Landlord;
 
 @Repository
 public interface LandlordRepo extends MongoRepository<Landlord, String> {

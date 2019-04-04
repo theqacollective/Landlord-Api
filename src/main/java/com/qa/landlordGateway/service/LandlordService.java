@@ -1,4 +1,4 @@
-package com.qa.landlordgateway.service;
+package com.qa.landlordGateway.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.qa.landlordgateway.entity.Landlord;
-import com.qa.landlordgateway.repository.LandlordRepo;
-import com.qa.landlordgateway.Constants;
+import com.qa.landlordGateway.Constants;
+import com.qa.landlordGateway.entity.Landlord;
+import com.qa.landlordGateway.repository.LandlordRepo;
 
 @Service 
 public class LandlordService {
