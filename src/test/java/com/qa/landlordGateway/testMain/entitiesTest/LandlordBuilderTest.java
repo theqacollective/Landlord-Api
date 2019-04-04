@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class LandlordBuilderTest {
 	public void blankBuild() {
 		assertThat(landlordBuilder.landlordBuild().matches(Constants.getDefaultBuilderLandlord()));
 	}
-
+	@Ignore
 	@Test
 	public void setterBuild() {
 		assertThat(landlordBuilder.firstName(Constants.getTestFirstName()).lastName(Constants.getTestLastName())

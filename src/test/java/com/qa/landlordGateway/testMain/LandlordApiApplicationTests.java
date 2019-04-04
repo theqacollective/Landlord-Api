@@ -1,6 +1,7 @@
 package com.qa.landlordGateway.testMain;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +25,7 @@ public class LandlordApiApplicationTests {
 		this.constants = new Constants();
 		this.constants = new Constants();
 	}
-
+	@Ignore
 	@Test
 	public void contextLoads() {
 		String[] args = new String[] { "Hello World" };
