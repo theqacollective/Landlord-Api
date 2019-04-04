@@ -5,7 +5,7 @@ public class Constants {
 	public static final String DELETE_URL = "/deleteLandlord";
 	public static final String UPDATE_URL = "/updateLandlord/{firstName}/{lastName}";
 	public static final String GET_ALL_LANDLORDS_PATH = "/getAllLandlords";
-	public static final String LANDLORD_SERCH_PATH = "/lanlordSearch";
+	public static final String LANDLORD_SERCH_PATH = "/landlordSearch";
 
 	private static String naString = "N/A";
 	private static final String CREATION_MESSAGE = "New entry added";

@@ -24,34 +24,39 @@ public class LandlordController {
 
 	private LandlordService landlordService;
 	private LandlordBuilder landlordBuilder;
-	
+
 	public LandlordController(LandlordService landlordService, LandlordBuilder landlordBuilder) {
 		this.landlordService = landlordService;
 		this.landlordBuilder = landlordBuilder;
 	}
-	
+
 	@PostMapping(Constants.CREATE_LANDLORD_PATH)
 	public ResponseEntity<Landlord> createLandlord(@RequestBody Landlord landlord) {
 		return this.landlordService.createLandlord(landlord);
 	}
+
 	@GetMapping(Constants.GET_ALL_LANDLORDS_PATH)
-	public List<Landlord> getLandlords(){
+	public List<Landlord> getLandlords() {
 		return this.landlordService.getLandlords();
 	}
+
 	@GetMapping(Constants.LANDLORD_SERCH_PATH)
-	public List<Landlord> landlordSearch(String firstName, String lastName, String email, String phoneNumber){
-		return this.landlordService.landlordSearch(landlordBuilder.firstName(firstName).lastName(lastName).email(email).phoneNumber(phoneNumber).landlordBuild());
+	public List<Landlord> landlordSearch(String firstName, String lastName, String email, String phoneNumber) {
+		return this.landlordService.landlordSearch(landlordBuilder.firstName(firstName).lastName(lastName).email(email)
+				.phoneNumber(phoneNumber).landlordBuild());
 	}
+
 	@DeleteMapping(Constants.DELETE_URL)
-	public String deleteLandlord(String firstName, String lastName,String email, String phoneNumber) {
-		
-		List<Landlord> landlords = this.landlordSearch(firstName,lastName,email,phoneNumber);
+	public String deleteLandlord(String firstName, String lastName, String email, String phoneNumber) {
+
+		List<Landlord> landlords = this.landlordSearch(firstName, lastName, email, phoneNumber);
 
 		for (int i = 0; i < landlords.size(); i++) {
 			this.landlordService.deleteLandlord(landlords.get(i));
 		}
 		return Constants.getDeletionMessage();
 	}
+
 	private RestTemplateBuilder rtb;
 
 	@PutMapping(Constants.UPDATE_URL)
@@ -59,6 +64,7 @@ public class LandlordController {
 	{
 		return this.landlordService.updateLandlord(firstName, lastName, updateLandlord);
 	}
+
 	public RestTemplateBuilder getRtb() {
 		return rtb;
 	}
@@ -66,6 +72,5 @@ public class LandlordController {
 	public void setRtb(RestTemplateBuilder rtb) {
 		this.rtb = rtb;
 	}
-	
-}
 
+}
