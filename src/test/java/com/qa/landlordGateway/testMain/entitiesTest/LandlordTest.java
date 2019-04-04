@@ -3,6 +3,7 @@ package com.qa.landlordGateway.testMain.entitiesTest;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNull;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,6 +27,8 @@ public class LandlordTest {
 				Constants.getNaString());
 		assertThat(landlord.matches(Constants.getDefaultBuilderLandlord()));
 	}
+	
+	@Ignore
 	@Test
 	public void getterTest(){
 		assertNull(Constants.getNullLandlord().getFirstName());
