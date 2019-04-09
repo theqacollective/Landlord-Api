@@ -2,7 +2,7 @@ package com.qa.landlordGateway;
 
 public class Constants {
 	public static final String CREATE_LANDLORD_PATH = "/createLandlord";
-	public static final String DELETE_URL = "/deleteLandlord";
+	public static final String DELETE_URL = "/deleteLandlord/{firstName}/{lastName}";
 	public static final String UPDATE_URL = "/updateLandlord/{firstName}/{lastName}";
 	public static final String GET_ALL_LANDLORDS_PATH = "/getAllLandlords";
 	public static final String LANDLORD_SERCH_PATH = "/landlordSearch";

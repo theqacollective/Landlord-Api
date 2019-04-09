@@ -31,7 +31,7 @@ public class LandlordController {
 	}
 
 	@PostMapping(Constants.CREATE_LANDLORD_PATH)
-	public ResponseEntity<Landlord> createLandlord(@RequestBody Landlord landlord) {
+	public String createLandlord(@RequestBody Landlord landlord) {
 		return this.landlordService.createLandlord(landlord);
 	}
 
@@ -47,14 +47,8 @@ public class LandlordController {
 	}
 
 	@DeleteMapping(Constants.DELETE_URL)
-	public String deleteLandlord(String firstName, String lastName, String email, String phoneNumber) {
-
-		List<Landlord> landlords = this.landlordSearch(firstName, lastName, email, phoneNumber);
-
-		for (int i = 0; i < landlords.size(); i++) {
-			this.landlordService.deleteLandlord(landlords.get(i));
-		}
-		return Constants.getDeletionMessage();
+	public String deleteLandlord(@PathVariable("firstName")String firstName, @PathVariable("lastName")String lastName) {
+		return this.landlordService.deleteLandlord(firstName, lastName);
 	}
 
 	private RestTemplateBuilder rtb;

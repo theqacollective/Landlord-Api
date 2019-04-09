@@ -20,8 +20,12 @@ public class LandlordService {
 		this.landlordRepo = landlordRepo;
 	}
 	
-	public ResponseEntity<Landlord> createLandlord(Landlord landlord) {
-		return new ResponseEntity<Landlord>(this.landlordRepo.save(landlord), HttpStatus.OK);
+	public String createLandlord(Landlord landlord) {
+		if(this.landlordRepo.getLandlordsByFirstNameAndLastName(landlord.getFirstName(), landlord.getLastName()) !=null) {
+			return "Landlord Already Exists";
+		}
+		this.landlordRepo.save(landlord);
+		return "Landlord Created";
 	}
 	public List<Landlord> getLandlords(){
 		return this.landlordRepo.findAll();	
@@ -45,8 +49,12 @@ public class LandlordService {
 		return Constants.getUpdateMesssage();
 	}
 
-	public String deleteLandlord(Landlord landlord) {
-		this.landlordRepo.delete(landlord);
+	public String deleteLandlord(String firstName,String lastName) {
+		if(this.landlordRepo.getLandlordsByFirstNameAndLastName(firstName, lastName)==null)
+		{
+			return "Requested Landlord Does Not Exist";
+		}
+		this.landlordRepo.delete(this.landlordRepo.getLandlordsByFirstNameAndLastName(firstName, lastName));
 		return Constants.getDeletionMessage();
 	}
 }

@@ -50,8 +50,7 @@ public class LandlordControllerTest {
 
 	@Test
 	public void testLandlordCreation() throws Exception {
-		when(service.createLandlord((Landlord) notNull())).thenReturn(Constants.getLandlordCreated());
-		assertEquals(service.createLandlord(testLandlord).getStatusCode(),HttpStatus.OK);
+		assertEquals(service.createLandlord(testLandlord),"Landlord Created");
 		
 	}
 

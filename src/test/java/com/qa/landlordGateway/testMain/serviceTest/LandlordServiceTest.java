@@ -60,7 +60,7 @@ public class LandlordServiceTest {
 			landlordList.add(newLandlord);
 			return Constants.getNullLandlord();
 		});
-		assertThat(landlordService.createLandlord(newLandlord).getStatusCode()).isEqualTo(HttpStatus.OK);
+		assertThat(landlordService.createLandlord(newLandlord).equals("Landlord Created"));
 		assertThat(landlordList.size()).isEqualTo(3);
 		assertThat(landlordList.get(2)).isEqualToComparingFieldByField(Constants.getConstructedLandlord());
 	}
